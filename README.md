@@ -68,6 +68,8 @@ Scans multiple directories with different depth settings.
 |---|---|
 | `0` | Scan only the root folder itself |
 | `1` | Scan one level below the root folder |
+| `2` | Scan two levels below the root folder |
+| `...` | Continue increasing recursion depth accordingly |
 | empty | Unlimited recursion |
 
 ---
