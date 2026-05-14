@@ -17,6 +17,8 @@ Useful for analyzing generic folder structures such as exports, archives, docume
 - Unlimited recursion support
 - Supports paths with spaces
 - Outputs only leaf folders
+- Export results as `.json`, `.csv`, and `.txt`
+- Stores configuration and preferences from previous runs
 - Lightweight PowerShell implementation
 - Simple interactive workflow
 
