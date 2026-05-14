@@ -2,59 +2,67 @@
 
 LeafFolderList scans one or multiple directories and lists only **leaf folders** — folders that do not contain any subfolders.
 
-The script supports:
-- Multiple scan paths
+Useful for analyzing generic folder structures such as exports, archives, document collections, Excel file directories, text file repositories, or project folders.
+
+---
+
+# Features
+
+- Scan multiple directories in one run
 - Individual recursion depth per path
-- Unlimited recursion
-- Paths containing spaces
-- Clean console output
-
----
-
-## Features
-
-- Scan multiple directories in a single run
-- Per-path depth control
 - Unlimited recursion support
-- Detects only final/leaf folders
-- Simple command-line workflow
+- Supports paths with spaces
+- Outputs only leaf folders
 - Lightweight PowerShell implementation
+- Simple interactive workflow
 
 ---
 
-## Usage
+# Usage
 
-When started, the script prompts for scan paths.
+When the script starts, you will be prompted to enter one or multiple scan paths.
 
-### Input Format
+## Input Format
 
 ```text
 "path"|depth; path2|depth; path3|
 ```
 
-### Examples
+---
+
+# Examples
+
+## Limited recursion
 
 ```text
-"C:\Media"|2
+"C:\Exports"|2
 ```
 
-Scan `C:\Media` up to depth 2.
-
-```text
-D:\Downloads|
-```
-
-Unlimited recursion.
-
-```text
-"C:\Movies"|1; D:\Series|3; E:\Music|
-```
-
-Multiple scan targets with different depth settings.
+Scans up to 2 levels below the root folder.
 
 ---
 
-## Depth Behavior
+## Unlimited recursion
+
+```text
+D:\TextFiles|
+```
+
+Scans all subfolders recursively.
+
+---
+
+## Multiple paths
+
+```text
+"C:\Excel Files"|1; D:\Reports|3; E:\Archive|
+```
+
+Scans multiple directories with different depth settings.
+
+---
+
+# Depth Behavior
 
 | Depth | Behavior |
 |---|---|
@@ -64,7 +72,7 @@ Multiple scan targets with different depth settings.
 
 ---
 
-## Example Prompt
+# Example Prompt
 
 ```text
 Separate multiple scan paths with ;
@@ -80,25 +88,25 @@ Example:
 
 ---
 
-## Output
-
-The script outputs only leaf folders:
+# Example Output
 
 ```text
-C:\Movies\Alien
-C:\Movies\Blade Runner
-D:\Series\Dark\Season 1
+C:\Exports\January
+C:\Exports\February
+C:\Excel Files\Reports
+D:\TextFiles\Archive
 ```
 
 ---
 
-## Requirements
+# Requirements
 
-- Windows PowerShell or PowerShell 7
+- Windows PowerShell 5.1 or newer
+- PowerShell 7 recommended
 - Windows operating system
 
 ---
 
-## License
+# License
 
 MIT License
